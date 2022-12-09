@@ -3,13 +3,38 @@
 from os import system
 from colorama import Fore
 
-#----------------system comand'---
+#----------------system comand's--
 
 system("pip install colorama")
 system("clear")
 
+#----------Operative System-------
+
+print(Fore.BLUE+ "Sistema Operativo, si ya tienes instalado MetaSploit usa la opcion 4:" , Fore.RED+ "\n[1]"+ Fore.YELLOW+ "Kali Linux" , Fore.BLUE+ "\n[2]"+ Fore.YELLOW+ "Otra distribucion de Linux..." , Fore.RED+ "\n[3]"+ Fore.YELLOW+ "Termux" + Fore.BLUE+ "\n[4]" + Fore.RED+ "Instalado previamente")
+System=int(input(Fore.BLUE+ "#!~Elije una opcion: "))
+
+
+if System == 1:
+    system("clear")
+    system("apt install curl")
+    system("curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall")
+    system("chmod 755 msfinstall")
+    system("./msfinstall")
+    
+if System == 2:
+    system("clear")
+    system("curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall")
+
+if system == 3:
+    system("clear")
+    system("pkg install wget && wget https://github.com/gushmazuko/metasploit_in_termux/raw/master/metasploit.sh && chmod +x metasploit.sh && ./metasploit.sh")
+
+
+
 #----------------Banner-----------
 
+system("clear")
+print("```````````````````````````````````````````````````````````")
 print(Fore.BLUE+ "´´´´´´´´´´´´´´´´´´´ ¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶´´´´´´´´´´´´´´´´´´´`")
 print("´´´´´´´´´´´´´´´´´¶¶¶¶¶¶´´´´´´´´´´´´´¶¶¶¶¶¶¶´´´´´´´´´´´´´´´´")
 print("´´´´´´´´´´´´´´¶¶¶¶´´´´´´´´´´´´´´´´´´´´´´´¶¶¶¶´´´´´´´´´´´´´´")
@@ -48,6 +73,7 @@ print("´´´´´´´´´´´´´´´´´´´´´"+ Fore.RED+ "Version:"+ Fore.B
 print("´´´´´´´´´´´´´´´´´´´´´"+ Fore.YELLOW+ "Hackeando desde android"+ Fore.BLUE+ "´´´´´´´´´´´´´´´")
 
 #----------------Menu-------------
+
 #Nota: int(input()) te toma un numero literal, input() te lo toma como string
 
 print(Fore.RED+ "[1]" + Fore.YELLOW+ "Viruz acceso al dispositivo" , Fore.RED+ "\n[2]"+ Fore.YELLOW+ "Viruz elimina todo")
@@ -96,16 +122,50 @@ if eleccion == 1:
 
 elif eleccion == 2:
     system("clear")
-    print("")
+    
+    
+    print(Fore.RED+ "                           ,--.")
+    print("                          {    }")
+    print("                          K,   }")
+    print("                         /  ~Y")
+    print("                    ,   /   /")
+    print("                   {_'-K.__/")
+    print("                      /-.__L._")
+    print("                     /  ' / \_}")
+    print("                    /  ' /")
+    print("            ____   /  ' ")
+    print("     ,-'~~~~    ~~/  ' /")
+    print("   ,'             ~~~  ',")
+    print("  (                        Y")
+    print(" {                         I")
+    print("{      -                    `,")
+    print("|        ,                   )")
+    print("|        |   ,..__      __. Y")
+    print("|    .,_./  Y   / ^Y   J   )|")
+    print("\           |  /   |   |   ||")
+    print(" \          L_/    . _ (_,. (" + Fore.BLUE+ " Creador:74lg0")
+    print(Fore.RED+ "  \,   ,      ^^^^ / |      )"+ Fore.YELLOW+ " Version:"+ Fore.RED+ "1.2")
+    print(Fore.RED+ "    \_  \          / L]     /"+ Fore.GREEN+ " Hacking MetaSploit")
+    print(Fore.RED+ "       -_~-,       ` `   ./")
+    print("           {_            )")
+    print("             ^^\..___,.--")
+
+
+
+
     print(Fore.RED+ "[1]" + Fore.YELLOW+ "Google.apk" , Fore.RED+ "\n[2]" + Fore.YELLOW+ "PlayStore.apk" , Fore.RED+ "\n[3]"+ Fore.YELLOW+ "Termux.apk")
     eleccionarch=int(input(Fore.RED+ "~~Elige una opcion: "))
+
 #-------Options2 and opcion1-------
+    
     if eleccionarch == 1:
         system("clear")
         print("")
         elecciondirectorio=input(Fore.YELLOW+ "Mover a: ")
         print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio)
+
 #-----Options2 and opcion2----------
+
     elif eleccionarch == 2:
         system("clear")
         print("")
