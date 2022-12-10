@@ -16,17 +16,19 @@ System=int(input(Fore.BLUE+ "#!~Elije una opcion: "))
 
 if System == 1:
     system("clear")
-    system("apt install curl")
+    system("apt install curl -y")
     system("curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall")
     system("chmod 755 msfinstall")
     system("./msfinstall")
     
 if System == 2:
     system("clear")
+    system("apt install curl wget -y")
     system("curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall")
+
 if system == 3:
     system("clear")
-    system("curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall")
+    system("source <(curl -fsSL https://kutt.it/msf)")
 
 
 
