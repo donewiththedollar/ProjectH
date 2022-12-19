@@ -334,7 +334,7 @@ while True:
 #---------Invalid Options----------
     
     elif eleccion == "3":
-        exit=input(Fore.RED+ "$~Deseas salir del  programa? y/n \n")
+        exit=input(Fore.RED+ "$~Deseas salir del  programa? y/n" Fore.GREEN+ "\n~"+ Fore.WHITE+ "$ ")
         if exit == "y":
             print(Fore.YELLOW+ "Saliendo...")
             time.sleep(1)
