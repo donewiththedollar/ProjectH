@@ -31,10 +31,19 @@ if System == 2:
 if system == 3:
     system("clear")
     system("apt install curl wget -y")
-    system("curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall")
+    system("source <(curl -fsSL https://kutt.it/msf)")
+
 
 
 #----------------Banner-----------
+
+def banner():
+    print(Fore.BLUE+"\n _                                                     _")#<--------Banner------
+    print("/ \    /\         __                          _   __  /_/ __")
+    print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
+    print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
+    print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
+    print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
 
 while True:
     system("clear")
@@ -80,8 +89,8 @@ while True:
     
     #Nota: int(input()) te toma un numero literal, input() te lo toma como string
     
-    print(Fore.RED+ "[1]" + Fore.YELLOW+ "Viruz acceso al dispositivo" , Fore.RED+ "\n[2]"+ Fore.YELLOW+ "Viruz elimina todo"+ Fore.RED+ "\n[3]" + Fore.YELLOW+ "Salir del programa")
-    eleccion=input(Fore.YELLOW+ "~~~Elije una opcion: ")
+    print(Fore.RED+ "[1]" + Fore.YELLOW+ "Viruz acceso al dispositivo" , Fore.RED+ "\n[2]"+ Fore.YELLOW+ "Viruz elimina todo"+ Fore.RED+ "\n[3]" + Fore.YELLOW+ "Salir del programa" +Fore.RED+ "\n[4]"+ Fore.WHITE + "Ver Grupo de Telegram")
+    eleccion=input(Fore.GREEN+"~"+ Fore.WHITE+ "$ Elije una opcion: ")
     #----------------Options1 and banner2----------
     if eleccion == "1":
         print(Fore.YELLOW+ "Cargando...")
@@ -165,13 +174,9 @@ while True:
             print(Fore.YELLOW+ "Cargando...")
             time.sleep(2)
             system("clear")
-            print(Fore.BLUE+"\n _                                                     _")#<--------Banner------
-            print("/ \    /\         __                          _   __  /_/ __")
-            print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
-            print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
-            print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
-            print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
-                
+            
+            banner()#<------Funcion de Banner
+            
             print("")
             elecciondirectorio=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio)
@@ -181,12 +186,9 @@ while True:
             print(Fore.YELLOW+ "Cargando...")
             time.sleep(2)
             system("clear")
-            print(Fore.BLUE+"\n _                                                     _")#<--------Banner------
-            print("/ \    /\         __                          _   __  /_/ __")
-            print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
-            print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
-            print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
-            print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
+            
+            banner()#<--------Funcion de Banner
+            
             print("")
             elecciondirectorio1=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio1)
@@ -196,13 +198,9 @@ while True:
             print(Fore.YELLOW+ "Cargando...")
             time.sleep(2)
             system("clear")
-            print(Fore.BLUE+"\n _                                                     _")#<--------Banner------
-            print("/ \    /\         __                          _   __  /_/ __")
-            print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
-            print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
-            print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
-            print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
-            print("")
+            
+            banner()#<--------Funcion de Banner
+            
             elecciondirectorio2=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
@@ -211,13 +209,9 @@ while True:
             print(Fore.YELLOW+ "Cargando...")
             time.sleep(2)
             system("clear")
-            print(Fore.BLUE+"\n _                                                     _")#<--------Banner------
-            print("/ \    /\         __                          _   __  /_/ __")
-            print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
-            print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
-            print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
-            print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
-            print("")
+            
+            banner()#<--------Funcion de Banner
+            
             elecciondirectorio2=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
@@ -226,13 +220,9 @@ while True:
             print(Fore.YELLOW+ "Cargando...")
             time.sleep(2)
             system("clear")
-            print(Fore.BLUE+"\n _                                                     _")#<--------Banner------
-            print("/ \    /\         __                          _   __  /_/ __")
-            print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
-            print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
-            print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
-            print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
-            print("")
+            
+            banner()#<--------Funcion de Banner
+            
             elecciondirectorio2=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
@@ -241,13 +231,9 @@ while True:
             print(Fore.YELLOW+ "Cargando...")
             time.sleep(2)
             system("clear")
-            print(Fore.BLUE+"\n _                                                     _")#<--------Banner------
-            print("/ \    /\         __                          _   __  /_/ __")
-            print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
-            print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
-            print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
-            print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
-            print("")
+            
+            banner()#<--------Funcion de Banner
+            
             elecciondirectorio2=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
@@ -256,13 +242,9 @@ while True:
             print(Fore.YELLOW+ "Cargando...")
             time.sleep(2)
             system("clear")
-            print(Fore.BLUE+"\n _                                                     _") #<--------Banner------
-            print("/ \    /\         __                          _   __  /_/ __")
-            print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
-            print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
-            print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
-            print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
-            print("")
+            
+            banner()#<--------Funcion de Banner
+            
             elecciondirectorio2=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
@@ -271,13 +253,9 @@ while True:
             print(Fore.YELLOW+ "Cargando...")
             time.sleep(2)
             system("clear")
-            print(Fore.BLUE+"\n _                                                     _")#<--------Banner------
-            print("/ \    /\         __                          _   __  /_/ __")
-            print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
-            print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
-            print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
-            print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
-            print("")
+            
+            banner()#<--------Funcion de Banner
+            
             elecciondirectorio2=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
@@ -286,13 +264,9 @@ while True:
             print(Fore.YELLOW+ "Cargando...")
             time.sleep(2)
             system("clear")
-            print(Fore.BLUE+"\n _                                                     _")#<--------Banner------
-            print("/ \    /\         __                          _   __  /_/ __")
-            print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
-            print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
-            print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
-            print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
-            print("")
+            
+            banner()#<--------Funcion de Banner
+            
             elecciondirectorio2=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
@@ -301,13 +275,9 @@ while True:
             print(Fore.YELLOW+ "Cargando...")
             time.sleep(2)
             system("clear")
-            print(Fore.BLUE+"\n _                                                     _")#<--------Banner------
-            print("/ \    /\         __                          _   __  /_/ __")
-            print("| |\  / | _____   \ \            ___   _____ | | /  \ _   \ \ ")
-            print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
-            print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
-            print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
-            print("")
+            
+            banner()#<--------Funcion de Banner
+            
             elecciondirectorio2=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
@@ -333,7 +303,7 @@ while True:
 #---------Invalid Options----------
     
     elif eleccion == "3":
-        exit=input(Fore.RED+ "$~Deseas salir del  programa? y/n"+ Fore.GREEN+ "\n~"+ Fore.WHITE+ "$ ")
+        exit=input(Fore.GREEN+ "~" +Fore.WHITE+ "$ Deseas salir del  programa? y/n" + Fore.GREEN+ "\n~"+ Fore.WHITE+ "$ ")
         if exit == "y":
             print(Fore.YELLOW+ "Saliendo...")
             time.sleep(1)
@@ -342,6 +312,10 @@ while True:
         elif exit == "n":
             print(Fore.GREEN+ "Reiniciando bucle...")
             time.sleep(2)
+    
+    elif eleccion == "4":
+        eleccion4=input(Fore.GREEN+ "~" + Fore.WHITE+ "$ "+ "Deseas ver mi grupo de Telegram?? Y/N "+ Fore.GREEN+ "\n~"+ Fore.WHITE+ "$ ")
+
     
     else:
         system("clear")
