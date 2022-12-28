@@ -4,37 +4,6 @@ from os import system
 from colorama import Fore
 import time
 import sys
-
-#----------------system comand's--
-
-system("pip install colorama")
-system("clear")
-
-#----------Operative System-------
-
-print(Fore.BLUE+ "Sistema Operativo, si ya tienes instalado MetaSploit usa la opcion 4:" , Fore.RED+ "\n[1]"+ Fore.YELLOW+ "Kali Linux" , Fore.BLUE+ "\n[2]"+ Fore.YELLOW+ "Otra distribucion de Linux..." , Fore.RED+ "\n[3]"+ Fore.YELLOW+ "Termux" + Fore.BLUE+ "\n[4]" + Fore.RED+ "Instalado previamente")
-System=int(input(Fore.BLUE+ "#!~Elije una opcion: "))
-
-
-if System == 1:
-    system("clear")
-    system("apt install curl -y")
-    system("curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall")
-    system("chmod 755 msfinstall")
-    system("./msfinstall")
-    
-if System == 2:
-    system("clear")
-    system("apt install curl wget -y")
-    system("curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall")
-
-if system == 3:
-    system("clear")
-    system("apt install curl wget -y")
-    system("source <(curl -fsSL https://kutt.it/msf)")
-
-
-
 #----------------Banner-----------
 
 def banner():
