@@ -4,7 +4,48 @@ The project will continue to be constantly updated, adding more tools and making
 # Banner's
 ![](https://i.postimg.cc/NMBVm0dy/IMG-20221219-142031.jpg)
 
-
 ![](https://i.postimg.cc/ZqZjDMp2/IMG-20221219-142052.jpg)
 
 ![](https://i.postimg.cc/W1KqdFbn/IMG-20221219-142111.jpg)
+# how to use my tool>??
+How to install it: 
+if you already have git installed skip the first step
+ # Termux
+     1:pkg install git -y
+   
+     2:git clone https://github.com/74lg0/ProjectH
+     
+     3:cd ProjectH
+      
+     4:apt install colorama -y 
+     
+     5:apt install curl wget -y
+     
+     6:python3 requirements.py
+     
+     7:python3 MiniLav.py
+     
+# Linux and other distributions
+     1:sudo apt install git -y
+     
+     2:git clone https://github.com/74lg0/ProjectH
+     
+     3:cd ProjectH
+     
+     4:sudo apt install colorama -y
+     
+     5:sudo apt install curl wget -y
+     
+     6:python3 requirement.py
+     
+     7:python3 MiniLav.py
+     
+# Requirement
+     
+     Python3
+     
+     MetaSploit
+     
+     curl wget
+     
+     colorama (It will be installed once we install the requirement.py)
