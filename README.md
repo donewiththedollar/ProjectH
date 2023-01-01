@@ -48,4 +48,4 @@ if you already have git installed skip the first step
      
      curl wget
      
-     colorama (It will be installed once we install the requirement.py)
+     colorama (It will be installed once we install the install.sh)
