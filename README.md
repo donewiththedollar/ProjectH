@@ -21,7 +21,7 @@ if you already have git installed skip the first step
      
      5:apt install curl wget -y
      
-     6:python3 requirements.py
+     6:bash install.sh
      
      7:python3 MiniLav.py
      
@@ -36,7 +36,7 @@ if you already have git installed skip the first step
      
      5:sudo apt install curl wget -y
      
-     6:python3 requirement.py
+     6:bash install.sh
      
      7:python3 MiniLav.py
      
