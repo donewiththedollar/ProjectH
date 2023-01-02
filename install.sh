@@ -1,4 +1,4 @@
-pip install colorama -y
+pip install colorama
 
 apt install curl wget -y
 
