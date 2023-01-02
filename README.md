@@ -49,3 +49,14 @@ if you already have git installed skip the first step
      curl wget
      
      colorama (It will be installed once we install the install.sh)
+     
+     
+# Legal Agreement-Acuerdo legal
+    Yo autor de este script
+    no me hago responsable de cualquier daño causado por este
+    a fin de cuentas este scrip fue creado con fines eticos
+    
+    
+    I, the author of this script
+    am not responsible for any damage caused by it, after all 
+    this script was created for ethical purposes
