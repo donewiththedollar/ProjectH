@@ -4,6 +4,9 @@ from os import system
 from colorama import Fore
 import time
 import sys
+
+#----------Operative System------
+
 #----------------Banner-----------
 
 def banner():
@@ -13,6 +16,7 @@ def banner():
     print("| | \/| | | ___\ |- -|   /\     / __\ | -__/ | || | || | |- -|")
     print("|_|   | | | _|__  | |_  / -\  __\ \   | |    | | \__/| |  | |_")
     print("      |/  |____/  \___\/ /\ \ \___/   \/     \__|    |_\  \___\ ")
+    print("              https://t.me/HackingAndPrograming")
 
 while True:
     system("clear")
@@ -53,12 +57,13 @@ while True:
     print("´´´´´´´´´´´´´´´´´´´´´"+ Fore.RED+ "Creador:"+ Fore.GREEN+ "74lg0" + Fore.BLUE+ "´´´´´´´´´´´´´´´´´´´´´´´")
     print("´´´´´´´´´´´´´´´´´´´´´"+ Fore.RED+ "Version:"+ Fore.BLUE+ "1.2"+Fore.BLUE+ "´´´´´´´´´´´´´´´´´´´´´´´´´´´")
     print("´´´´´´´´´´´´´´´´´´´´´"+ Fore.YELLOW+ "Hackeando desde android"+ Fore.BLUE+ "´´´´´´´´´´´´´´´")
+    print(Fore.BLUE+ "´´´´´´´´´´´" + Fore.GREEN+ "https://t.me/HackingAndPrograming" + Fore.BLUE+ "´´´´´´´´´´´´´´´")
     
     #----------------Menu-------------
     
     #Nota: int(input()) te toma un numero literal, input() te lo toma como string
     
-    print(Fore.RED+ "[1]" + Fore.YELLOW+ "Viruz acceso al dispositivo" , Fore.RED+ "\n[2]"+ Fore.YELLOW+ "Viruz elimina todo"+ Fore.RED+ "\n[3]" + Fore.YELLOW+ "Salir del programa" +Fore.RED+ "\n[4]"+ Fore.WHITE + "Ver Grupo de Telegram")
+    print(Fore.RED+ "[1]" + Fore.YELLOW+ "Viruz acceso al dispositivo" , Fore.RED+ "\n[2]"+ Fore.YELLOW+ "Viruz elimina todo"+ Fore.RED+ "\n[3]" + Fore.YELLOW+ "Salir del programa"+ Fore.RED+ "\n[4]"+ Fore.YELLOW+ "Escaneo con Nmap a direcciones IP"+ Fore.GREEN+ "[NEW]")
     eleccion=input(Fore.GREEN+"~"+ Fore.WHITE+ "$ Elije una opcion: ")
     #----------------Options1 and banner2----------
     if eleccion == "1":
@@ -92,6 +97,7 @@ while True:
         print(Fore.YELLOW+ "                        Hacking MetaSploit")
         
         
+        print(Fore.RED+ "                https://t.me/HackingAndPrograming")
         print(Fore.YELLOW+ "\n------------------------------------------")
         print("Nota:El archivo solo funciona para windows")
         print("------------------------------------------")
@@ -129,8 +135,8 @@ while True:
         print(" \          L_/    . _ (_,. (" + Fore.BLUE+ " Creador:74lg0")
         print(Fore.RED+ "  \,   ,      ^^^^ / |      )"+ Fore.YELLOW+ " Version:"+ Fore.RED+ "1.2")
         print(Fore.RED+ "    \_  \          / L]     /"+ Fore.GREEN+ " Hacking MetaSploit")
-        print(Fore.RED+ "       -_~-,       ` `   ./")
-        print("           {_            )")
+        print(Fore.RED+ "       -_~-,       ` `   ./" + Fore.BLUE+ "https://t.me/HackingAndPrograming")
+        print(Fore.RED+ "           {_            )")
         print("             ^^\..___,.--")
 
 #--------------15 archivoz-----------------
@@ -193,6 +199,7 @@ while True:
             banner()#<--------Funcion de Banner
             
             elecciondirectorio2=input(Fore.YELLOW+ "Mover a: ")
+            
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
 #-----Options3 and Options6---------
@@ -250,7 +257,24 @@ while True:
             elecciondirectorio2=input(Fore.YELLOW+ "Mover a: ")
             print(Fore.RED+ "Archivo movido a " + Fore.YELLOW+ elecciondirectorio2)
             time.sleep(3)
+
+#-----All archivez------------------
+
+        elif eleccionarch == "all" or "All" or "ALL":
+            system("clear")
+            
+            banner()
+            
+            ALL=input(Fore.YELLOW+ "deseas mover todos los viruz a un solo directorio??" + Fore.GREEN+ " Y" + Fore.WHITE+ "/" +Fore.RED+ "N \n")
+            if ALL == "N":
+                print("reiniciando bucle...")
+                time.sleep(1)
+            elif ALL == "Y":
+                print("Moviendo archivoz esto puede tardar un poco...")
+                time.sleep(1)
+
 #---------Invalid Options----------
+        
         else:
             system("clear")
             
@@ -266,10 +290,30 @@ while True:
             print("[%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        `'$    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]")
             print("[%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]")
 
-            
+            print("                        https://t.me/HackingAndPrograming")
             print(Fore.RED+ "                             Elije una opcion valida...")
             time.sleep(3)
 #---------Invalid Options----------
+    
+    elif eleccion == "4":
+        system("clear")
+        
+        print(Fore.RED+ "\n                   _______________")
+        print("                 _|               |_")
+        print("               _|                   |_")
+        print("             _|                       |_")
+        print("           _|                           |_")
+        print("         _|              "+Fore.BLUE+ " *"+Fore.RED+ "               |_")
+        print("        |                "+Fore.BLUE+"*|*"+Fore.RED+"                |_")
+        print("        |               "+Fore.BLUE+ "* | *"+Fore.RED+"                 |")
+        print("        |_              "+Fore.BLUE+"* | *"+Fore.RED+"                _|")
+        print("          |_             "+Fore.BLUE+"*|*"+Fore.RED+"               _|")
+        print("            |_            "+Fore.BLUE+"*"+Fore.RED+"              _|")
+        print("              |_                       _|")
+        print("                |_                   _|")
+        print("                  |_________________|")
+        print(Fore.BLUE+ "SEGUIMOS ACCTUALIZANDO EL SCRIPT, PRONTO SE AGREGARA AL 100% NMAP")
+        time.sleep(4)
     
     elif eleccion == "3":
         exit=input(Fore.GREEN+ "~" +Fore.WHITE+ "$ Deseas salir del  programa? y/n" + Fore.GREEN+ "\n~"+ Fore.WHITE+ "$ ")
@@ -281,10 +325,6 @@ while True:
         elif exit == "n":
             print(Fore.GREEN+ "Reiniciando bucle...")
             time.sleep(2)
-    
-    elif eleccion == "4":
-        eleccion4=input(Fore.GREEN+ "~" + Fore.WHITE+ "$ "+ "Deseas ver mi grupo de Telegram?? Y/N "+ Fore.GREEN+ "\n~"+ Fore.WHITE+ "$ ")
-
     
     else:
         system("clear")
@@ -309,4 +349,5 @@ while True:
         print("                   ,dOd,")
         print("                     .")
         print(Fore.YELLOW+ "elije una opcion valida y vuelve a intentarlo" , Fore.BLUE+ ":>")
+        print(Fore.BLUE+ "       https://t.me/HackingAndPrograming")
         time.sleep(3)
