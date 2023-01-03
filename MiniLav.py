@@ -332,11 +332,11 @@ while True:
             SO=input(Fore.GREEN+"~"+Fore.WHITE+"$ ")
             if SO == "1":
                 print("Istalando Nmap...")
-                system("pkg install nmap")
+                system("pkg install nmap -y")
                 time.sleep(5)
             elif SO == "2":
                 print("Instalando Nmap...")
-                system("sudo apt install nmap")
+                system("sudo apt install nmap -y")
                 time.sleep(5)
             else:
                 print(Fore.RED+"Elije una opcion valida")
