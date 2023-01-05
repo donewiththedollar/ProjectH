@@ -315,7 +315,7 @@ while True:
                 print("Checando Nmap...")
                 time.sleep(2)
                 Nmap2=input("Ingresa la direccion IPv4 de la victima: ")
-                system("nmap -Pn " + Nmap)
+                system("nmap -Pn " + Nmap2)
                 time.sleep(3)
                 break
             
