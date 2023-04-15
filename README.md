@@ -1,6 +1,9 @@
 # ProjectH
 ProjectH is a project dedicated to Hacking with MetaSploit msfvenom, as well as a variety of Viruz for android. 
 The project will continue to be constantly updated, adding more tools and making it easier to use.
+
+*MiniLav is a basic hacking laboratory, with features such as DOS, Nmap, and MetaSploit.*
+
 # Banner's
 ![](https://i.postimg.cc/NMBVm0dy/IMG-20221219-142031.jpg)
 
