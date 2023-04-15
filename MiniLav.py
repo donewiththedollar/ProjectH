@@ -1,4 +1,4 @@
-#----import system and colorama---
+#---import system and colorama---
 
 from os import system
 from colorama import Fore
