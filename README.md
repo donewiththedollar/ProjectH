@@ -30,7 +30,7 @@ if you already have git installed skip the first step
      
      2:git clone https://github.com/74lg0/ProjectH
      
-     3:cd ProjectH
+     3: cd ProjectH
      
      4:sudo apt install colorama -y
      
