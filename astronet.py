@@ -54,7 +54,7 @@ if code_response == "y":
     time.sleep(2)
     if treads == "":
         for i in range(500):
-            system("curl -s -o /dev/null "+sitio+"/"+ actual_code)
+            system("curl -s -o /dev/null "+sitio+"/"+actual_code)
         print("Conexion terminada...")
     
     else:
