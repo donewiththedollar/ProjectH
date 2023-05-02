@@ -26,33 +26,37 @@ How to install it:
 if you already have git installed skip the first step
  # Termux
      1:pkg install git -y
-   
-     2:git clone https://github.com/74lg0/ProjectH
      
-     3:cd ProjectH
+     2:pkg install python && pkg install python3
+     
+     3:git clone https://github.com/74lg0/ProjectH
+     
+     4:cd ProjectH
       
-     4:apt install colorama -y 
+     5:python3 install colorama -y 
      
-     5:apt install curl wget -y
+     6:pkg install curl wget -y
      
-     6:bash install.sh
+     7:bash install.sh
      
-     7:python3 MiniLav.py
+     8:python3 MiniLav.py
      
 # Linux and other distributions
      1:sudo apt install git -y
      
-     2:git clone https://github.com/74lg0/ProjectH
+     2:sudo apt install python && sudo apt install python3
      
-     3: cd ProjectH
+     3:git clone https://github.com/74lg0/ProjectH
      
-     4:sudo apt install colorama -y
+     4:cd ProjectH
      
-     5:sudo apt install curl wget -y
+     5:sudo apt install colorama -y
      
-     6:bash install.sh
+     6:sudo apt install curl wget -y
      
-     7:python3 MiniLav.py
+     7:bash install.sh
+     
+     8:python3 MiniLav.py
      
 # Requirement
      
@@ -66,8 +70,8 @@ if you already have git installed skip the first step
      
      
 # Legal Agreement-Acuerdo legal
-    Yo autor de este script
-    no me hago responsable de cualquier daño causado por este
+    Yo, autor de este script,
+    no me hago responsable de cualquier daño causado por este,
     a fin de cuentas este scrip fue creado con fines eticos
     
     
