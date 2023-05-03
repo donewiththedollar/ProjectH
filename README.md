@@ -12,8 +12,7 @@ The project will continue to be constantly updated, adding more tools and making
 # Attack
 [![Screenshot-2023-05-03-11-11-26.png](https://i.postimg.cc/xdSMbYkd/Screenshot-2023-05-03-11-11-26.png)](https://postimg.cc/NKp5W3kh)
 # Server
-
-[![Screenshot-2023-05-03-11-13-05.png](https://i.postimg.cc/26gZrDfm/Screenshot-2023-05-03-11-13-05.png)](https://postimg.cc/qhXRxWRZ)
+<img src="https://i.postimg.cc/26gZrDfm/Screenshot-2023-05-03-11-13-05.png">
 ㅤㅤ
 
 # Banner's
