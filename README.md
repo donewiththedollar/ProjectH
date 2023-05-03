@@ -7,11 +7,11 @@ The project will continue to be constantly updated, adding more tools and making
 *Astronet is a small Python program for DDoS attacks, using legitimate connections with curl as a base, as well as adding more user-agents to generate more traffic, among other updates and performance improvements, etc.*
 !!The program is created for ethical purposes.!!
 # Banner's AstroNet
-# 1
+# Menu
 [![Screenshot-2023-05-02-13-08-01.png](https://i.postimg.cc/3JqmrVvS/Screenshot-2023-05-02-13-08-01.png)](https://postimg.cc/56w6nPpL)
-# 2
+# Attack
 [![Screenshot-2023-05-02-13-09-04.png](https://i.postimg.cc/nLrLshfq/Screenshot-2023-05-02-13-09-04.png)](https://postimg.cc/7Cv4dD6L)
-# 3
+# Server
 [![Screenshot-2023-05-02-13-09-18.png](https://i.postimg.cc/vZHYjZBC/Screenshot-2023-05-02-13-09-18.png)](https://postimg.cc/zV6YH5Tk)
 ㅤㅤ
 
@@ -33,11 +33,11 @@ if you already have git installed skip the first step
      
      4:cd ProjectH
       
-     5:python3 install colorama -y 
+     5:pip install colorama -y 
      
      6:pkg install curl wget -y
      
-     7:bash install.sh
+     7:bash install-termux.sh
      
      8:python3 MiniLav.py
      
@@ -50,7 +50,7 @@ if you already have git installed skip the first step
      
      4:cd ProjectH
      
-     5:sudo apt install colorama -y
+     5:pip install colorama -y
      
      6:sudo apt install curl wget -y
      
@@ -66,7 +66,7 @@ if you already have git installed skip the first step
      
      curl wget
      
-     colorama (It will be installed once we install the install.sh)
+     colorama
      
      
 # Legal Agreement-Acuerdo legal
