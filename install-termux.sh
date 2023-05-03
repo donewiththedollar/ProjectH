@@ -1,4 +1,7 @@
 echo -e "Iniciando Instalacion..."
+
+pkg install slowloris -y
+
 pip install colorama -y
 
 pkg install curl wget -y
