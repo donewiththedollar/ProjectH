@@ -6,7 +6,6 @@ The project will continue to be constantly updated, adding more tools and making
 # New script!
 *Astronet is a small Python program for DDoS attacks, using legitimate connections as well as adding more user-agents to generate more traffic, among other updates and performance improvements, etc.*
 !!The program is created for ethical purposes.!!
-# Banner's AstroNet
 # Menu
 [![Screenshot-2023-05-03-11-06-19.png](https://i.postimg.cc/t4Jmm3D6/Screenshot-2023-05-03-11-06-19.png)](https://postimg.cc/VJyRJbxs)
 # Attack
