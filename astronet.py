@@ -51,7 +51,6 @@ if method == 1:
     if code_response == "n":
         time.sleep(1)
         if treads == "":
-            print("solicitudes terminadas...")
             for i in range(500):
                 system("curl -s -o /dev/null "+host+"/hack-74lg0-for-educational-use")
             print("solicitudes terminadas...")
