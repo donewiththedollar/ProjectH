@@ -1,5 +1,7 @@
 echo -e "Iniciando La Instalacion"
 
+sudo apt install slowloris -y
+
 pip install colorama
 
 sudo apt install curl wget -y
