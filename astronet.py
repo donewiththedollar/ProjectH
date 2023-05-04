@@ -146,11 +146,14 @@ elif method == "6":
             
             
             
-    for x in range(1, time):
-        print(Fore.BLUE+"Enviando paquete #"+str(x)+" de "+str(time)+" paquetes"+Fore.YELLOW+" UDP "+Fore.WHITE+"a "+Fore.GREEN+ip+Fore.BLUE+" a treves del puerto "+Fore.YELLOW+str(port))
+    for x in range(time):
+        number_package=x + 1
+        print(Fore.BLUE+"Enviando paquete #"+str(number_package)+" de "+str(time)+" paquetes"+Fore.YELLOW+" UDP "+Fore.WHITE+"a "+Fore.GREEN+ip+Fore.BLUE+" a treves del puerto "+Fore.YELLOW+str(port)+Fore.GREEN+" [✓]")
         sock.connect((ip,int(port)))
         sock.send(bytes)
-    
+        if number_package == time:
+            print("Exelente, todos los paquetes fueron enviados con exitos ;)")
+        
     
 else:
     for i in range(100):
