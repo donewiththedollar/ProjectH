@@ -51,11 +51,11 @@ print(Fore.BLUE+"██╔══██║░╚═══██╗░░░██
 print(Fore.BLUE+"██║░░██║██████╔╝░░░██║░░░██║░░██║╚█████╔╝"+Fore.RED+" ██║░╚███║███████╗░░░██║░░░")
 print(Fore.BLUE+"╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝ "+Fore.RED+" ╚═╝░░╚══╝╚══════╝░░░╚═╝░░░")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~Created by:"+Creator+Fore.RED+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-print("~~~~~~~~~~~~~~~~~~~~~~~~~ Version: "+Version+Fore.RED+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-print(Fore.WHITE+"------------------- DoS-Denial of Service  -------------------------\n")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~ Version: "+Version+Fore.RED+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print(Fore.WHITE+"\n---------------------- DoS-Denial of Service  -----------------------\n")
 print(Fore.GREEN+"[1]"+Fore.WHITE+"Peticiones curl"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"UDP/TCP")
-print("\n-------------------------------- Ip tools  -------------------------\n")
-method=input(Fore.GREEN+"[5]"+Fore.WHITE+"Escaneo con Nmap"+Fore.GREEN+"\n[6]"+Fore.WHITE+"Mi ip"+Fore.WHITE+"\n\n~~~~> ")
+print("\n----------------------------- Ip tools  -----------------------------\n")
+method=input(Fore.GREEN+"[5]"+Fore.WHITE+"Escaneo con Nmap"+Fore.GREEN+"\n[6]"+Fore.WHITE+"Mi ip"+Fore.GREEN+"\n[7]"+Fore.WHITE+"Informacion de mi dispositivo\n\n~~~~"+Fore.GREEN+">"+Fore.WHITE+"")
 if method == "1":
     host=input("Ingresa el IP, Host\n~~~~> ")
     treads=input("Ingresa el numero de solicitudes, default("+Fore.BLUE+"500"+Fore.WHITE+")\n~~~~> ")
@@ -145,7 +145,7 @@ elif method == "5":
     time.sleep(2)
     system("clear")
     Nmap_banner()
-    ip=input(Fore.WHITE+"Ingresa la direccion IPv4\n~~~~"+Fore.GREEN+"> ")
+    ip=input(Fore.WHITE+"Ingresa la direccion IPv4\n~~~~"+Fore.GREEN+">"+Fore.WHITE+" ")
     system("nmap -Pn "+ip)
             
             
@@ -153,7 +153,13 @@ elif method == "5":
 elif method == "6":
     print("Tu direccion IP es:")
     time.sleep(1)
-    system("curl ifconfig.me")           
+    system("curl ifconfig.me")
+    
+    
+elif method == "7":
+    print("Informacion de tu dispositivo...")
+    time.sleep(1)
+    system("curl ifconfig.me/all.json")
     
     
 else:
