@@ -178,7 +178,6 @@ elif method == "8":
         
         return api_json_res
 
-if __name__ == '__main__':
     
     ip = input("Ingrese la dirección IP: ")
     
