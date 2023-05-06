@@ -2,6 +2,8 @@ from os import system
 import time
 from colorama import Fore
 import socket
+import requests
+import json
 import random
 Creator=Fore.BLUE+"74lg0"
 Version=Fore.WHITE+"1.0"
@@ -55,7 +57,7 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~ Version: "+Version+Fore.RED+" ~~~~~~~~~~~~~~~~~
 print(Fore.WHITE+"\n---------------------- DoS-Denial of Service  -----------------------\n")
 print(Fore.GREEN+"[1]"+Fore.WHITE+"Peticiones curl"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"UDP/TCP")
 print("\n----------------------------- Ip tools  -----------------------------\n")
-method=input(Fore.GREEN+"[5]"+Fore.WHITE+"Escaneo con Nmap"+Fore.GREEN+"\n[6]"+Fore.WHITE+"Mi ip"+Fore.GREEN+"\n[7]"+Fore.WHITE+"Informacion de mi dispositivo\n\n~~~~"+Fore.GREEN+">"+Fore.WHITE+"")
+method=input(Fore.GREEN+"[5]"+Fore.WHITE+"Escaneo con Nmap"+Fore.GREEN+"\n[6]"+Fore.WHITE+"Mi ip"+Fore.GREEN+"\n[7]"+Fore.WHITE+"Informacion de mi dispositivo"+Fore.GREEN+"\n[8]"+Fore.WHITE+"Obtener Informacion de una IP"+"\n\n~~~~"+Fore.GREEN+">"+Fore.WHITE+" ")
 if method == "1":
     host=input("Ingresa el IP, Host\n~~~~> ")
     treads=input("Ingresa el numero de solicitudes, default("+Fore.BLUE+"500"+Fore.WHITE+")\n~~~~> ")
@@ -160,6 +162,32 @@ elif method == "7":
     print("Informacion de tu dispositivo...")
     time.sleep(1)
     system("curl ifconfig.me/all.json")
+    
+elif method == "8":
+    api_url = "http://ip-api.com/json/"
+    
+    parametros ='status,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query'
+    
+    data = {"fields":parametros}
+    
+    def ip_scraping(ip=""):
+        
+        res = requests.get(api_url+ip, data=data)
+        
+        api_json_res = json.loads(res.content)
+        
+        return api_json_res
+
+if __name__ == '__main__':
+    
+    ip = input("Ingrese la dirección IP: ")
+    
+    par = parametros.split(",")
+    for x in par:
+        print("")
+        print(x.upper(), ":"+str(ip_scraping(ip)[x]))
+        print("")
+    
     
     
 else:
