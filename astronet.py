@@ -14,7 +14,8 @@ def Nmap_banner():
     █▄─▀█▄─▄█▄─▀█▀─▄██▀▄─██▄─▄▄─█
     ██─█▄▀─███─█▄█─███─▀─███─▄▄▄█
     ▀▄▄▄▀▀▄▄▀▄▄▄▀▄▄▄▀▄▄▀▄▄▀▄▄▄▀▀▀
-""")
+    
+    """)
 
 def banner_udp_flood():
     print(Fore.RED+"██╗   ██╗██████╗ ██████╗"+Fore.WHITE+"     ██╗"+Fore.BLUE+" ████████╗ █████╗ ██████╗ ")
@@ -57,7 +58,11 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~ Version: "+Version+Fore.RED+" ~~~~~~~~~~~~~~~~~
 print(Fore.WHITE+"\n---------------------- DoS-Denial of Service  -----------------------\n")
 print(Fore.GREEN+"[1]"+Fore.WHITE+"Peticiones curl"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"UDP/TCP")
 print("\n----------------------------- Ip tools  -----------------------------\n")
-method=input(Fore.GREEN+"[5]"+Fore.WHITE+"Escaneo con Nmap"+Fore.GREEN+"\n[6]"+Fore.WHITE+"Mi ip"+Fore.GREEN+"\n[7]"+Fore.WHITE+"Informacion de mi dispositivo"+Fore.GREEN+"\n[8]"+Fore.WHITE+"Obtener Informacion de una IP"+"\n\n~~~~"+Fore.GREEN+">"+Fore.WHITE+" ")
+print(Fore.GREEN+"[5]"+Fore.WHITE+"Escaneo con Nmap"+Fore.GREEN+"\n[6]"+Fore.WHITE+"Mi ip"+Fore.GREEN+"\n[7]"+Fore.WHITE+"Informacion de mi dispositivo"+Fore.GREEN+"\n[8]"+Fore.WHITE+"Obtener Informacion de una IP"+Fore.GREEN+"\n[9]"+Fore.WHITE+"Informacion de los tipos de DoS")
+
+
+method=input(Fore.WHITE+"~~~~"+Fore.GREEN+">"+Fore.WHITE+" ")
+
 if method == "1":
     host=input("Ingresa el IP, Host\n~~~~> ")
     treads=input("Ingresa el numero de solicitudes, default("+Fore.BLUE+"500"+Fore.WHITE+")\n~~~~> ")
@@ -186,9 +191,12 @@ elif method == "8":
         print("")
         print(x.upper(), ":"+str(ip_scraping(ip)[x]))
         print("")
-    
-    
-    
+        
+        
+elif method == "9":
+    system("xdg-open index.html")
+        
+        
 else:
     for i in range(100):
         time.sleep(0.002)
