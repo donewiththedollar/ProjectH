@@ -1,5 +1,7 @@
 echo -e "Iniciando Instalacion..."
 
+pkg install xdg-utils
+
 pkg install slowloris -y
 
 pip install colorama -y
