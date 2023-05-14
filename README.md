@@ -69,11 +69,8 @@ if you already have git installed skip the first step
      
      
 # Legal Agreement-Acuerdo legal
-    Yo, autor de este script,
-    no me hago responsable de cualquier daño causado por este,
-    a fin de cuentas este scrip fue creado con fines eticos
+    El uso de MiniLav y Astronet para atacar objetivos sin previo consentimiento mutuo es ilegal .
     
+    Es responsabilidad del usuario final obedecer todas las leyes locales, estatales y federales aplicables.
     
-    I, the author of this script
-    am not responsible for any damage caused by it, after all 
-    this script was created for ethical purposes
+    Los desarrolladores no asumen ninguna responsabilidad y no son responsables de ningún mal uso o daño causado por este programa.
