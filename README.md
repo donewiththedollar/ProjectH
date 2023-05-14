@@ -70,7 +70,9 @@ if you already have git installed skip the first step
      
 # Legal Agreement-Acuerdo legal
     El uso de MiniLav y Astronet para atacar objetivos sin previo consentimiento mutuo es ilegal .
-    
     Es responsabilidad del usuario final obedecer todas las leyes locales, estatales y federales aplicables.
-    
     Los desarrolladores no asumen ninguna responsabilidad y no son responsables de ningún mal uso o daño causado por este programa.
+    
+    The use of MiniLav and Astronet to attack targets without prior mutual consent is illegal. 
+    It is the responsibility of the end user to comply with all applicable local, state, and federal laws. 
+    The developers assume no responsibility and are not liable for any misuse or damage caused by this program.
