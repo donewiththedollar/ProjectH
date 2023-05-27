@@ -2,9 +2,9 @@ echo -e "Iniciando Instalacion..."
 
 pkg install xdg-utils
 
-pkg install slowloris -y
+pip3 install slowloris
 
-pip install colorama -y
+pip3 install colorama
 
 pkg install curl wget -y
 
