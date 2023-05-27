@@ -1,8 +1,8 @@
 echo -e "Iniciando La Instalacion"
 
-sudo apt install slowloris -y
+pip3 install slowloris -y
 
-pip install colorama
+pip3 install colorama
 
 sudo apt install curl wget -y
 
