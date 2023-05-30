@@ -1,9 +1,4 @@
-# ProjectH
-ProjectH is a project dedicated to Hacking with MetaSploit msfvenom, as well as a variety of Viruz for android. 
-The project will continue to be constantly updated, adding more tools and making it easier to use.
-
-*MiniLav is a basic hacking laboratory, with features such as DOS, Nmap, and MetaSploit.*
-# New script!
+#Astronet 
 *Astronet is a small Python program for DDoS attacks, using legitimate connections as well as adding more user-agents to generate more traffic, among other updates and performance improvements, etc.*
 !!The program is created for ethical purposes.!!
 # Menu
@@ -14,12 +9,7 @@ The project will continue to be constantly updated, adding more tools and making
 <img src="https://i.postimg.cc/26gZrDfm/Screenshot-2023-05-03-11-13-05.png">
 ㅤㅤ
 
-# Banner's
-![](https://i.postimg.cc/NMBVm0dy/IMG-20221219-142031.jpg)
 
-![](https://i.postimg.cc/ZqZjDMp2/IMG-20221219-142052.jpg)
-
-![](https://i.postimg.cc/W1KqdFbn/IMG-20221219-142111.jpg)
 # how to use my tool>??
 How to install it: 
 if you already have git installed skip the first step
@@ -38,7 +28,7 @@ if you already have git installed skip the first step
      
      7:bash install-termux.sh
      
-     8:python3 MiniLav.py
+     8:python3 astronet.py
      
 # Linux and other distributions
      1:sudo apt install git -y
@@ -55,13 +45,11 @@ if you already have git installed skip the first step
      
      7:bash install.sh
      
-     8:python3 MiniLav.py
+     8:python3 astronet.py
      
 # Requirement
      
      Python3
-     
-     MetaSploit
      
      curl wget
      
